@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E94E45327C3AC370006C4C3 /* DepartPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E94E45227C3AC370006C4C3 /* DepartPickerVC.swift */; };
+		0EAD564327C613F300ACA014 /* DepartmentInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD564227C613F300ACA014 /* DepartmentInfoVC.swift */; };
 		0EAD91E027BF52BA002A2E31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD91DF27BF52BA002A2E31 /* AppDelegate.swift */; };
 		0EAD91E227BF52BA002A2E31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD91E127BF52BA002A2E31 /* SceneDelegate.swift */; };
 		0EAD91E427BF52BA002A2E31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD91E327BF52BA002A2E31 /* ViewController.swift */; };
@@ -16,6 +18,17 @@
 		0EAD91F727BF52BD002A2E31 /* Chapter06_HRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD91F627BF52BD002A2E31 /* Chapter06_HRTests.swift */; };
 		0EAD920127BF52BD002A2E31 /* Chapter06_HRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD920027BF52BD002A2E31 /* Chapter06_HRUITests.swift */; };
 		0EAD920327BF52BD002A2E31 /* Chapter06_HRUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD920227BF52BD002A2E31 /* Chapter06_HRUITestsLaunchTests.swift */; };
+		0EAD921127BF52F7002A2E31 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EAD921027BF52F7002A2E31 /* libsqlite3.tbd */; };
+		0EAD921E27BF540A002A2E31 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD921527BF540A002A2E31 /* FMDatabase.m */; };
+		0EAD921F27BF540A002A2E31 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD921627BF540A002A2E31 /* FMDatabaseQueue.m */; };
+		0EAD922027BF540A002A2E31 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD921727BF540A002A2E31 /* FMResultSet.m */; };
+		0EAD922127BF540A002A2E31 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD921927BF540A002A2E31 /* FMDatabaseAdditions.m */; };
+		0EAD922227BF540A002A2E31 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD921A27BF540A002A2E31 /* FMDatabasePool.m */; };
+		0EAD922527BF6286002A2E31 /* DepartmentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD922427BF6286002A2E31 /* DepartmentListVC.swift */; };
+		0EAD922727BF629D002A2E31 /* EmployeeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD922627BF629D002A2E31 /* EmployeeListVC.swift */; };
+		0EAD922927BF6831002A2E31 /* hr.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD922827BF6831002A2E31 /* hr.sqlite */; };
+		0EAD922B27BF6C8A002A2E31 /* DepartmentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD922A27BF6C8A002A2E31 /* DepartmentDAO.swift */; };
+		0EAD922D27BF8D9B002A2E31 /* EmployeeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD922C27BF8D9B002A2E31 /* EmployeeDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E94E45227C3AC370006C4C3 /* DepartPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartPickerVC.swift; sourceTree = "<group>"; };
+		0EAD564227C613F300ACA014 /* DepartmentInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentInfoVC.swift; sourceTree = "<group>"; };
 		0EAD91DC27BF52BA002A2E31 /* Chapter06-HR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chapter06-HR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAD91DF27BF52BA002A2E31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EAD91E127BF52BA002A2E31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +64,24 @@
 		0EAD91FC27BF52BD002A2E31 /* Chapter06-HRUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chapter06-HRUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAD920027BF52BD002A2E31 /* Chapter06_HRUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter06_HRUITests.swift; sourceTree = "<group>"; };
 		0EAD920227BF52BD002A2E31 /* Chapter06_HRUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter06_HRUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0EAD921027BF52F7002A2E31 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		0EAD921227BF5409002A2E31 /* Chapter06-HR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chapter06-HR-Bridging-Header.h"; sourceTree = "<group>"; };
+		0EAD921327BF5409002A2E31 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		0EAD921427BF540A002A2E31 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		0EAD921527BF540A002A2E31 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		0EAD921627BF540A002A2E31 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		0EAD921727BF540A002A2E31 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		0EAD921827BF540A002A2E31 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		0EAD921927BF540A002A2E31 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		0EAD921A27BF540A002A2E31 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		0EAD921B27BF540A002A2E31 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		0EAD921C27BF540A002A2E31 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		0EAD921D27BF540A002A2E31 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		0EAD922427BF6286002A2E31 /* DepartmentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentListVC.swift; sourceTree = "<group>"; };
+		0EAD922627BF629D002A2E31 /* EmployeeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListVC.swift; sourceTree = "<group>"; };
+		0EAD922827BF6831002A2E31 /* hr.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = hr.sqlite; sourceTree = "<group>"; };
+		0EAD922A27BF6C8A002A2E31 /* DepartmentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentDAO.swift; sourceTree = "<group>"; };
+		0EAD922C27BF8D9B002A2E31 /* EmployeeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EAD921127BF52F7002A2E31 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +113,13 @@
 		0EAD91D327BF52BA002A2E31 = {
 			isa = PBXGroup;
 			children = (
+				0EAD922327BF5410002A2E31 /* FMDB */,
 				0EAD91DE27BF52BA002A2E31 /* Chapter06-HR */,
 				0EAD91F527BF52BD002A2E31 /* Chapter06-HRTests */,
 				0EAD91FF27BF52BD002A2E31 /* Chapter06-HRUITests */,
 				0EAD91DD27BF52BA002A2E31 /* Products */,
+				0EAD920F27BF52F7002A2E31 /* Frameworks */,
+				0EAD921227BF5409002A2E31 /* Chapter06-HR-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +140,16 @@
 				0EAD91E127BF52BA002A2E31 /* SceneDelegate.swift */,
 				0EAD91E327BF52BA002A2E31 /* ViewController.swift */,
 				0EAD91E527BF52BA002A2E31 /* Main.storyboard */,
+				0EAD922427BF6286002A2E31 /* DepartmentListVC.swift */,
+				0EAD564227C613F300ACA014 /* DepartmentInfoVC.swift */,
+				0EAD922627BF629D002A2E31 /* EmployeeListVC.swift */,
 				0EAD91E827BF52BC002A2E31 /* Assets.xcassets */,
 				0EAD91EA27BF52BC002A2E31 /* LaunchScreen.storyboard */,
 				0EAD91ED27BF52BC002A2E31 /* Info.plist */,
+				0EAD922827BF6831002A2E31 /* hr.sqlite */,
+				0EAD922A27BF6C8A002A2E31 /* DepartmentDAO.swift */,
+				0EAD922C27BF8D9B002A2E31 /* EmployeeDAO.swift */,
+				0E94E45227C3AC370006C4C3 /* DepartPickerVC.swift */,
 			);
 			path = "Chapter06-HR";
 			sourceTree = "<group>";
@@ -125,6 +169,32 @@
 				0EAD920227BF52BD002A2E31 /* Chapter06_HRUITestsLaunchTests.swift */,
 			);
 			path = "Chapter06-HRUITests";
+			sourceTree = "<group>";
+		};
+		0EAD920F27BF52F7002A2E31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EAD921027BF52F7002A2E31 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0EAD922327BF5410002A2E31 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				0EAD921C27BF540A002A2E31 /* FMDatabase.h */,
+				0EAD921527BF540A002A2E31 /* FMDatabase.m */,
+				0EAD921427BF540A002A2E31 /* FMDatabaseAdditions.h */,
+				0EAD921927BF540A002A2E31 /* FMDatabaseAdditions.m */,
+				0EAD921327BF5409002A2E31 /* FMDatabasePool.h */,
+				0EAD921A27BF540A002A2E31 /* FMDatabasePool.m */,
+				0EAD921827BF540A002A2E31 /* FMDatabaseQueue.h */,
+				0EAD921627BF540A002A2E31 /* FMDatabaseQueue.m */,
+				0EAD921B27BF540A002A2E31 /* FMDB.h */,
+				0EAD921D27BF540A002A2E31 /* FMResultSet.h */,
+				0EAD921727BF540A002A2E31 /* FMResultSet.m */,
+			);
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +265,7 @@
 				TargetAttributes = {
 					0EAD91DB27BF52BA002A2E31 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					0EAD91F127BF52BD002A2E31 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -234,6 +305,7 @@
 				0EAD91EC27BF52BC002A2E31 /* LaunchScreen.storyboard in Resources */,
 				0EAD91E927BF52BC002A2E31 /* Assets.xcassets in Resources */,
 				0EAD91E727BF52BA002A2E31 /* Main.storyboard in Resources */,
+				0EAD922927BF6831002A2E31 /* hr.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +330,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EAD922D27BF8D9B002A2E31 /* EmployeeDAO.swift in Sources */,
+				0EAD922027BF540A002A2E31 /* FMResultSet.m in Sources */,
+				0EAD922527BF6286002A2E31 /* DepartmentListVC.swift in Sources */,
+				0EAD922B27BF6C8A002A2E31 /* DepartmentDAO.swift in Sources */,
+				0EAD564327C613F300ACA014 /* DepartmentInfoVC.swift in Sources */,
+				0EAD922727BF629D002A2E31 /* EmployeeListVC.swift in Sources */,
+				0EAD921F27BF540A002A2E31 /* FMDatabaseQueue.m in Sources */,
+				0E94E45327C3AC370006C4C3 /* DepartPickerVC.swift in Sources */,
 				0EAD91E427BF52BA002A2E31 /* ViewController.swift in Sources */,
 				0EAD91E027BF52BA002A2E31 /* AppDelegate.swift in Sources */,
 				0EAD91E227BF52BA002A2E31 /* SceneDelegate.swift in Sources */,
+				0EAD922227BF540A002A2E31 /* FMDatabasePool.m in Sources */,
+				0EAD922127BF540A002A2E31 /* FMDatabaseAdditions.m in Sources */,
+				0EAD921E27BF540A002A2E31 /* FMDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -454,6 +538,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "himchan.Chapter06-HR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Chapter06-HR-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,6 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -481,6 +568,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "himchan.Chapter06-HR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Chapter06-HR-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
