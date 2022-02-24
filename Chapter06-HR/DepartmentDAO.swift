@@ -21,6 +21,7 @@ class DepartmentDAO {
             try! fileMgr.copyItem(atPath: dbSource!, toPath: dbPath)
         }
         // 4. 준비된 데이터베이스 파일을 바탕으로 FMDatabase 객체를 생성
+        print(dbPath)
         let db = FMDatabase(path: dbPath)
         return db
     }()
@@ -38,10 +39,11 @@ class DepartmentDAO {
         do {
             // 1. 부서 정보 목록을 가져올 SQL 작성 및 쿼리 실행
             let sql = """
-                SELECT depart_cd, depart_title, depart_addr
-                FROM department
-                ORDER BY depart_cd ASC
-            """
+SELECT depart_cd, depart_title, depart_addr
+FROM department
+ORDER BY depart_cd ASC
+"""
+
             let rs = try self.fmdb.executeQuery(sql, values: nil)
             // 2. 결과 집합 추출
             while rs.next() {
@@ -59,10 +61,10 @@ class DepartmentDAO {
     func get(departCd: Int) -> DepartRecord? {
         // 1. 질의 실행
         let sql = """
-            SELECT depart_cd, depart_title, depart_addr
-            FROM department
-            WHERE depart_cd = ?
-        """
+SELECT depart_cd, depart_title, depart_addr
+FROM department
+WHERE depart_cd = ?
+"""
         let rs = self.fmdb.executeQuery(sql, withArgumentsIn: [departCd])
         // 결과 집합 처리
         if let _rs = rs { // 결과 집합이 옵셔널 타입으로 반환되므로, 이를 일반 상수에 바인딩하여 해제한다.
@@ -80,9 +82,9 @@ class DepartmentDAO {
     func create(title: String!, addr: String!) -> Bool {
         do {
             let sql = """
-                INSERT INTO department (depart_title, depart_addr)
-                VALUES ( ?, ? )
-            """
+INSERT INTO department (depart_title, depart_addr)
+VALUES ( ?, ? )
+"""
             try self.fmdb.executeUpdate(sql, values: [title!, addr!])
             return true
         } catch let error as NSError {
@@ -93,9 +95,9 @@ class DepartmentDAO {
     func remove(departCd: Int) -> Bool {
         do {
             let sql = """
-                DELETE FROM department
-                WHERE depart_cd = ?
-            """
+DELETE FROM department
+WHERE depart_cd = ?
+"""
             try self.fmdb.executeUpdate(sql, values: [departCd])
             return true
         } catch let error as NSError {

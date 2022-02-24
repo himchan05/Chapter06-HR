@@ -60,11 +60,11 @@ class EmployeeDAO {
             // 1. 조건절 정의
             let condition = departCd == 0 ? "" : "WHERE Employee.depart_cd = \(departCd)"
             let sql = """
-                SELECT emp_cd, emp_name, join_date, state_cd, department.depart_title
-                FROM employee JOIN department On department.depart_cd = employee.depart_cd
-                \(condition)
-                ORDER BY employee.depart_cd ASC
-            """
+SELECT emp_cd, emp_name, join_date, state_cd, department.depart_title
+FROM employee JOIN department On department.depart_cd = employee.depart_cd
+\(condition)
+ORDER BY employee.depart_cd ASC
+"""
             let rs = try self.fmdb.executeQuery(sql, values: nil)
             
             while rs.next() {
@@ -88,10 +88,10 @@ class EmployeeDAO {
     func get(empCd: Int) -> EmployeeVO? {
         // 1. 질의 실행
         let sql = """
-            SELECT emp_cd, emp_name, join_date, state_cd, department.depart_title
-            FROM employee JOIN department On department.depart_cd = employee.depart_cd
-            WHERE emp_cd = ?
-        """
+SELECT emp_cd, emp_name, join_date, state_cd, department.depart_title
+FROM employee JOIN department On department.depart_cd = employee.depart_cd
+WHERE emp_cd = ?
+"""
         let rs = self.fmdb.executeQuery(sql, withArgumentsIn: [empCd])
         // 결과 집합 처리
         if let _rs = rs { // 결과 집합이 옵셔널 타입이므로, 바인딩 변수를 통해 옵셔널 해제한다.
@@ -114,9 +114,9 @@ class EmployeeDAO {
     func  create(param: EmployeeVO) -> Bool {
         do {
             let sql = """
-                INSERT INTO employee (emp_name, join_date, state_cd, depart_cd)
-                VALUES ( ?, ?, ?, ?)
-            """
+INSERT INTO employee (emp_name, join_date, state_cd, depart_cd)
+VALUES ( ?, ?, ?, ? )
+"""
             // Prepared Statement를 위한 인자값
             var params = [Any]()
             params.append(param.empName)
@@ -134,13 +134,31 @@ class EmployeeDAO {
     func remove(empCd: Int) -> Bool {
         do {
             let sql = """
-                DELETE FROM employee
-                WHERE emp_cd = ?
-            """
+DELETE FROM employee
+WHERE emp_cd = ?
+"""
             try self.fmdb.executeUpdate(sql, values: [empCd])
             return true
         } catch let error as NSError {
             print("Remove Error : \(error.localizedDescription)")
+            return false
+        }
+    }
+    func editState(empCd: Int, StateCd: EmpStateType) -> Bool {
+        do {
+            let sql = """
+UPDATE Employee SET state_cd = ?
+WHERE emp_cd = ?
+"""
+            // 인자값 배열
+            var params = [Any]()
+            params.append(StateCd.rawValue) // 재직 상태 코드 0, 1, 2
+            params.append(empCd) // 사원 코드
+            // 업데이트 실행
+            try self.fmdb.executeUpdate(sql, values: params)
+            return true
+        } catch let error as NSError {
+            print("UPDATE Error : \(error.localizedDescription)")
             return false
         }
     }

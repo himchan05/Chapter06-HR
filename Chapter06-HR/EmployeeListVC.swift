@@ -71,6 +71,7 @@ class EmployeeListVC: UITableViewController {
                 }
             }
         })
+        self.present(alert, animated: false)
     }
     @IBAction func editing(_ sender: Any) {
         if self.isEditing == false { // 현재 편집 모드가 아닐 때
